@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 12px auto;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    background-color: #f7fdf7;
+    min-height: 520px;
+    border: 1px solid #ddd;
+}
+
+h1 {
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    width: 320px;
+    padding: 18px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #eaf7ea, #f7fff7);
+    border-right: 1px solid #d8d8d8;
+    overflow-y: auto;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.form-section label {
+    display: block;
+    margin: 10px 0 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.button-row button,
+.exit-row button {
+    padding: 8px 12px;
+    border: 1px solid #bbb;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.button-row button:hover,
+.exit-row button:hover {
+    background: #45a049;
+}
+
+.exit-row { 
+    margin-top: 12px; 
+}
+
+.exit-row button {
+    background: #f44336;
+    width: 100%;
+}
+
+.exit-row button:hover {
+    background: #da190b;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-list li:last-child {
+    border-bottom: none;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .form-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d8d8d8;
+    }
+}
+
+/* Inventory table styling */
+.inventory-section {
+    flex: 1;
+    padding: 14px 16px;
+    overflow-x: auto;
+}
+
+#inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#inventory-table th,
+#inventory-table td {
+    border: 1px solid #dcdcdc;
+    padding: 8px 10px;
+    font-size: 13px;
+    text-align: left;
+}
+
+#inventory-table thead th {
+    background: #f1f1f1;
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+#inventory-table tbody tr {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#inventory-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+tr.selected {
+    background: #fff9c7 !important;
+    font-weight: 500;
+}
